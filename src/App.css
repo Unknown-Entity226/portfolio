@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Define your custom animation */
+
+
+#root {
+  animation: fadeIn 0.3s ease-in-out;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url("./assets/favicon.png") center/contain no-repeat;
+  z-index: -1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

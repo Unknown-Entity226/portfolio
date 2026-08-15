@@ -1,0 +1,37 @@
+{
+    "activeFile": "",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Game Boy Advance - Pokemon FireRed _ LeafGreen - Tilesets - Tileset.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "palltetown.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        }
+    },
+    "last.externalTilesetPath": "/home/unknownentity/Portfolio/src/maps",
+    "last.imagePath": "/home/unknownentity/Downloads/Tileset pngs",
+    "map.height": 15,
+    "map.width": 15,
+    "mapScene.enableWorlds": true,
+    "openFiles": [
+    ],
+    "project": "palletTownBackground.tiled-project",
+    "recentFiles": [
+        "Game Boy Advance - Pokemon FireRed _ LeafGreen - Tilesets - Tileset.tsx",
+        "palltetown.tsx"
+    ],
+    "tileset.lastUsedFilter": "Tiled tileset files (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.useTransparentColor": true
+}
