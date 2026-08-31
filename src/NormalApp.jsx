@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Navbar from './Normalcomponents/Navbar';
 import Home from './Normalcomponents/Home';
 import Skills from './Normalcomponents/Skills';
@@ -12,15 +12,13 @@ const NormalApp = ({ setAppMode }) => {
 
   return (
     <div className="animate-fade-in min-h-screen text-white flex flex-col">
-      <button 
-        onClick={() => setAppMode('landing')}
-        className='absolute top-5 left-5 px-4 py-2 bg-transparent text-[#39ff14] border border-[#39ff14] rounded-md cursor-pointer'
-      >
-        Switch Portfolio
-      </button>
-
+      
       {/* Your Normal Portfolio Components Go Here */}
-      <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <Navbar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        setAppMode={setAppMode}
+      />
 
       {/* Main Content Render */}
       <main className="animate-fade-in flex-1 max-w-6xl w-full mx-auto p-6 flex items-center justify-center">
