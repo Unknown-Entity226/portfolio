@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import logo from "../assets/favicon.png";
 const Navbar = ({ activeTab, setActiveTab }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -24,7 +24,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           className="flex items-center gap-3 cursor-default"
         >
           <img 
-            src="src/assets/favicon.png" 
+            src={favicon} 
             alt="turtle" 
             className="max-w-8 h-auto object-contain drop-shadow-[0_0_8px_#39ff14] transition-transform duration-300 group-hover:scale-110" 
           />
