@@ -1,5 +1,5 @@
 import React from "react";
-
+import profileImage from "../assets/image.png";
 const Home = ({ setActiveTab }) => {
   return (
     <div className="flex items-center justify-center w-full min-h-[80vh] animate-fade-in">
@@ -48,7 +48,7 @@ const Home = ({ setActiveTab }) => {
         <div className="shrink-0 flex justify-center items-center">
           <div className="relative w-220px h-55 md:w-[320px] md:h-80">
             <img
-              src="./src/assets/image.png"
+              src= {profileImage}
               alt="Aarav Gupta"
               className="w-full h-full object-cover rounded-full border-4 border-white/15 shadow-[0_0_30px_rgba(74,222,128,0.5)] transition-all duration-400 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-[1.08] hover:border-[#4ade80] hover:shadow-[0_0_50px_#4ade80]"
             />
