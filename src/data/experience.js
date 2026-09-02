@@ -3,7 +3,7 @@ export const experienceData = [
     id: 1,
     role: "Student Intern",
     company: "Scientific Analysis Group (SAG), DRDO",
-    period: "June, 2026 - Present",
+    period: "July, 2026 - August, 2026",
     location: "New Delhi, India",
     type: "Internship",
     
