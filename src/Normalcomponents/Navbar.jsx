@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import logo from "../assets/favicon.png";
+import { useNavigate } from 'react-router-dom';
 const Navbar = ({ activeTab, setActiveTab }) => {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Navigation Items (including the new Experience section)
