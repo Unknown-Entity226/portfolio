@@ -16,7 +16,7 @@ const Landing = () => {
 
       <div className="flex gap-8 flex-wrap justify-center">
         <div
-          onClick={() => navigate("/portfolio")}
+          onClick={() => navigate("/normal")}
           className="w-2xs bg-white/5 backdrop-blur-md border border-[#39ff14]/40 p-10 rounded-3xl flex flex-col items-center cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:bg-[#39ff14]/10 hover:border-[#39ff14] hover:shadow-[0_10px_30px_rgba(57,255,20,0.1)] group"
         >
           <img src={normalport} alt="Normal Version" className="w-20 h-20" />

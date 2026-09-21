@@ -1,23 +1,37 @@
 import React, { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import exitIcon from "../assets/exit.png"
 import logo from "../assets/favicon.png";
-import { useNavigate } from 'react-router-dom';
-const Navbar = ({ activeTab, setActiveTab }) => {
+
+const Navbar = () => {
   const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Navigation Items (including the new Experience section)
   const navItems = [
-    { id: "home", label: "Home" },
-    { id: "projects", label: "Projects" },
-    { id: "experience", label: "Experience" },
-    { id: "skills", label: "Skills" },
-    { id: "contact", label: "Contact" },
-    { id: "about", label: "About" },
+    { path: "/normal", label: "Home" },
+    { path: "/normal/projects", label: "Projects" },
+    { path: "/normal/experience", label: "Experience" },
+    { path: "/normal/skills", label: "Skills" },
+    { path: "/normal/contact", label: "Contact" },
+    { path: "/normal/about", label: "About" },
   ];
+
+  const linkClass = ({ isActive }) =>
+    `px-4 py-2 text-sm font-medium uppercase tracking-wider rounded-lg transition-all duration-300 border ${
+      isActive
+        ? 'bg-[#39ff14]/15 border-[#39ff14] text-[#39ff14] shadow-[0_0_15px_rgba(57,255,20,0.4)]'
+        : 'bg-transparent border-transparent text-white hover:bg-white/5 hover:border-[#39ff14] hover:text-[#39ff14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)]'
+    }`;
+
+  const mobileLinkClass = ({ isActive }) =>
+    `text-left px-4 py-2 text-sm font-medium uppercase tracking-wider rounded-lg transition-all duration-300 border ${
+      isActive
+        ? "bg-[#39ff14]/15 border-[#39ff14] text-[#39ff14] shadow-[0_0_15px_rgba(57,255,20,0.4)]"
+        : "bg-transparent border-transparent text-white hover:bg-white/5 hover:border-[#39ff14] hover:text-[#39ff14]"
+    }`;
 
   return (
     <header className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-md border-b border-white/15 px-6 py-4 transition-all duration-300">
-      {/* Added 'relative' and 'w-full' to contain the absolute logo */}
       <div className="relative w-full mx-auto flex items-center justify-between">
         <div>
           <img
@@ -27,64 +41,48 @@ const Navbar = ({ activeTab, setActiveTab }) => {
             className="absolute top-1/2 -translate-y-1/2 left-0 p-0.5 w-8 bg-amber-100 rounded-md cursor-pointer md:top-5 md:-translate-y md:left-5"
           />
         </div>
+
         {/* Brand / Logo */}
-        <div
-          onClick={() => setActiveTab("home")}
-          // Positioned absolute center for mobile, static for desktop
-          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center gap-3 cursor-default"
+        <NavLink
+          to="/normal"
+          end
+          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center gap-3 cursor-pointer"
         >
-          <img 
-            src={logo} 
-            alt="turtle" 
-            className="max-w-8 h-auto object-contain drop-shadow-[0_0_8px_#39ff14] transition-transform duration-300 group-hover:scale-110" 
+          <img
+            src={logo}
+            alt="turtle"
+            className="max-w-8 h-auto object-contain drop-shadow-[0_0_8px_#39ff14] transition-transform duration-300 group-hover:scale-110"
           />
           <span className="text-3xl font-bold italic tracking-wide text-white group-hover:text-[#39ff14] transition-colors duration-300">
             Aarav
           </span>
-        </div>
+        </NavLink>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-2">
-          {navItems.map((item) => {
-            const isActive = activeTab === item.id;
-            return (
-              <button
-                key={item.id}
-                onClick={() => setActiveTab(item.id)}
-                className={`px-4 py-2 text-sm font-medium uppercase tracking-wider rounded-lg transition-all duration-300 border ${
-                  isActive
-                    ? "bg-[#39ff14]/15 border-[#39ff14] text-[#39ff14] shadow-[0_0_15px_rgba(57,255,20,0.4)]"
-                    : "bg-transparent border-transparent text-white hover:bg-white/5 hover:border-[#39ff14] hover:text-[#39ff14] hover:shadow-[0_0_15px_rgba(57,255,20,0.3)]"
-                }`}
-              >
-                {item.label}
-              </button>
-            );
-          })}
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end={item.path === "/normal"}
+              className={linkClass}
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </nav>
 
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          // Added 'ml-auto' to push the menu icon to the right edge
           className="ml-auto md:hidden text-white p-2 focus:outline-none"
           aria-label="Toggle Menu"
         >
-          <svg
-            className="w-6 h-6 fill-current text-[#39ff14]"
-            viewBox="0 0 24 24"
-          >
+          <svg className="w-6 h-6 fill-current text-[#39ff14]" viewBox="0 0 24 24">
             {isMobileMenuOpen ? (
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 011.414 1.414l-4.828 4.829 4.828 4.828z"
-              />
+              <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 011.414 1.414l-4.828 4.829 4.828 4.828z" />
             ) : (
-              <path
-                fillRule="evenodd"
-                d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"
-              />
+              <path fillRule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z" />
             )}
           </svg>
         </button>
@@ -93,25 +91,17 @@ const Navbar = ({ activeTab, setActiveTab }) => {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="md:hidden mt-3 pt-3 border-t border-white/10 flex flex-col gap-2 bg-black/80 backdrop-blur-lg rounded-xl p-4 animate-fade-in">
-          {navItems.map((item) => {
-            const isActive = activeTab === item.id;
-            return (
-              <button
-                key={item.id}
-                onClick={() => {
-                  setActiveTab(item.id);
-                  setIsMobileMenuOpen(false);
-                }}
-                className={`text-left px-4 py-2 text-sm font-medium uppercase tracking-wider rounded-lg transition-all duration-300 border ${
-                  isActive
-                    ? "bg-[#39ff14]/15 border-[#39ff14] text-[#39ff14] shadow-[0_0_15px_rgba(57,255,20,0.4)]"
-                    : "bg-transparent border-transparent text-white hover:bg-white/5 hover:border-[#39ff14] hover:text-[#39ff14]"
-                }`}
-              >
-                {item.label}
-              </button>
-            );
-          })}
+          {navItems.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              end={item.path === "/normal"}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={mobileLinkClass}
+            >
+              {item.label}
+            </NavLink>
+          ))}
         </div>
       )}
     </header>

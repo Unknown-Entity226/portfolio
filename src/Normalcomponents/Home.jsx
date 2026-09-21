@@ -1,6 +1,11 @@
 import React from "react";
+
 import profileImage from "../assets/image.png";
+import { useNavigate } from "react-router-dom";
 const Home = ({ setActiveTab }) => {
+
+  const navigate = useNavigate();
+
   return (
     <div className="flex items-center justify-center w-full min-h-[80vh] animate-fade-in">
       {/* Single Card Container (text + image inside one box, like reference) */}
@@ -27,7 +32,7 @@ const Home = ({ setActiveTab }) => {
 
           <div className="flex flex-wrap gap-5 justify-center md:justify-start">
             <button
-              onClick={() => setActiveTab("projects")}
+              onClick={() => navigate("/normal/projects")}
               className="px-8 py-3 bg-[#39ff14] text-black font-bold text-lg rounded-xl transition-all duration-300 ease-in-out hover:scale-105 hover:bg-white hover:shadow-[0_0_25px_#39ff14]"
             >
               View Projects
