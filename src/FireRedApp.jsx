@@ -1,13 +1,11 @@
+import { useState } from "react";
 import React from "react";
 
-function FireRedApp(){
+const FireRedApp = ({setAppMode}) =>{
     return (
         <>
-        <div className="">
-            <h1>Currently under Construction</h1>
-        </div>
+        <h1>Under Construction</h1>
         </>
-    );
-}
-
+    )
+};
 export default FireRedApp;

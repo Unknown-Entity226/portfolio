@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.12.2" orientation="orthogonal" renderorder="right-down" width="15" height="15" tilewidth="32" tileheight="32" infinite="0" nextlayerid="6" nextobjectid="1">
- <tileset firstgid="1" source="../../../src/maps/palltetown.tsx"/>
- <tileset firstgid="353" source="../../../src/maps/ocean.tsx"/>
+ <tileset firstgid="1" source="palltetown.tsx"/>
+ <tileset firstgid="353" source="ocean.tsx"/>
  <tileset firstgid="965" source="../../../src/maps/Game Boy Advance - Pokemon FireRed _ LeafGreen - Tilesets - Tileset.tsx"/>
  <layer id="1" name="ground" width="15" height="15">
   <data encoding="csv">
