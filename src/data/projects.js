@@ -4,6 +4,8 @@ import image from '../assets/image.png';
 import civic from '../assets/civic.png'
 import akhada from '../assets/akhada.png'
 import leetcode from '../assets/leetcodeicon.png'
+import crypt from "../assets/crypt.png"
+
 export const projects = [
     {
         id: 1,
@@ -55,4 +57,13 @@ export const projects = [
       live: "https://leetcode.com/u/unknown-entity226/",
       tags: ["Python", "DSA"],
     },
+    {
+        id: 6, 
+        icon: crypt,
+        title: "Cryptanalysis of the A5/1 Stream Cipher", 
+        description:     "An academically structured research project comparing classical and ML-based cryptanalysis of the A5/1 GSM stream cipher. Implements the cipher from scratch, a guess-and-determine attack, a 1M-example synthetic dataset, and 7 ML models",
+        github: "https://github.com/Unknown-Entity226/a5-1-stream-cipher", 
+        live:"", 
+        tags: ["Python", "Cryptanalysis","Machine Learning", "A5/1 algorithm"]
+    }
 ];
