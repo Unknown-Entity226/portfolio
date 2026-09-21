@@ -21,7 +21,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           <img
             src={exitIcon}
             alt="Return to experience selection"
-            onClick={() => setAppMode("landing")}
+            onClick={() => navigate("/")}
             className="absolute top-1/2 -translate-y-1/2 left-0 p-0.5 w-8 bg-amber-100 rounded-md cursor-pointer md:top-5 md:-translate-y md:left-5"
           />
         </div>
