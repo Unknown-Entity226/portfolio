@@ -1,8 +1,6 @@
-import React from "react";
-
 import profileImage from "../assets/image.png";
 import { useNavigate } from "react-router-dom";
-const Home = ({ setActiveTab }) => {
+const Home = () => {
 
   const navigate = useNavigate();
 
@@ -38,20 +36,20 @@ const Home = ({ setActiveTab }) => {
               View Projects
             </button>
 
-            <a
+            {/* <a
               href="./assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 bg-transparent text-[#39ff14] border-2 border-[#39ff14] font-bold text-lg rounded-xl transition-all duration-300 ease-in-out hover:scale-105 hover:bg-[#39ff14]/10 hover:shadow-[0_0_20px_rgba(57,255,20,0.4)]">
 
               Download CV
-            </a>
+            </a> */}
           </div>
         </div>
 
         {/* Right Column: Profile Image */}
         <div className="shrink-0 flex justify-center items-center">
-          <div className="relative w-[220px] h-55 md:w-[320px] md:h-80">
+          <div className="relative w-55 h-55 md:w-[320px] md:h-80">
             <img
               src= {profileImage}
               alt="Aarav Gupta"

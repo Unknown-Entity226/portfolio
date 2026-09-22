@@ -1,4 +1,3 @@
-import React from 'react';
 import { experienceData } from '../data/experience';
 import { stats } from '../data/leetcodeStats';
 

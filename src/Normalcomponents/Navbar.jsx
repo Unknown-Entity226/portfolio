@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import exitIcon from "../assets/exit.png"
 import logo from "../assets/favicon.png";
@@ -32,21 +32,21 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-md border-b border-white/15 px-6 py-4 transition-all duration-300">
-      <div className="relative w-full mx-auto flex items-center justify-between">
-        <div>
-          <img
-            src={exitIcon}
-            alt="Return to experience selection"
-            onClick={() => navigate("/")}
-            className="absolute top-1/2 -translate-y-1/2 left-0 p-0.5 w-8 bg-amber-100 rounded-md cursor-pointer md:top-5 md:translate-y-0 md:left-5"
-          />
-        </div>
+      <div className="w-full mx-auto flex items-center gap-3">
+        <button
+          type="button"
+          onClick={() => navigate("/")}
+          className="shrink-0 rounded-md bg-amber-100 p-0.5"
+          aria-label="Return to experience selection"
+        >
+          <img src={exitIcon} alt="" className="w-8 cursor-pointer" />
+        </button>
 
         {/* Brand / Logo */}
         <NavLink
           to="/normal"
           end
-          className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 flex items-center gap-3 cursor-pointer"
+          className="flex shrink-0 items-center gap-3 cursor-pointer"
         >
           <img
             src={logo}
@@ -59,7 +59,7 @@ const Navbar = () => {
         </NavLink>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-2">
+        <nav className="ml-auto hidden md:flex items-center gap-2">
           {navItems.map((item) => (
             <NavLink
               key={item.path}

@@ -1,4 +1,3 @@
-import React from "react";
 
 import github from "../assets/github_logo.png";
 import insta from "../assets/insta.png";
