@@ -37,7 +37,7 @@ const About = () => {
               <p className="text-gray-400 text-lg mt-2">
                 Guru Gobind Singh Indraprastha University (GGSIPU)
               </p>
-              <p className="text-gray-500 text-md mt-1">
+              <p className="text-gray-500 text-base mt-1">
                 University School of Information, Communication and Technology (USICT)
               </p>
             </div>

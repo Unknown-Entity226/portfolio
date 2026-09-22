@@ -51,7 +51,7 @@ const Home = ({ setActiveTab }) => {
 
         {/* Right Column: Profile Image */}
         <div className="shrink-0 flex justify-center items-center">
-          <div className="relative w-220px h-55 md:w-[320px] md:h-80">
+          <div className="relative w-[220px] h-55 md:w-[320px] md:h-80">
             <img
               src= {profileImage}
               alt="Aarav Gupta"

@@ -27,7 +27,7 @@ const Projects = () => {
                 <img 
                   src={project.icon} 
                   alt={project.title} 
-                  className="w-80% h-full object-cover opacity-80 transition-opacity duration-300 hover:opacity-100"
+                  className="w-[80%] h-full object-cover opacity-80 transition-opacity duration-300 hover:opacity-100"
                 />
               ) : (
                 <div className="text-6xl drop-shadow-[0_0_15px_#39ff14]">💻</div>
