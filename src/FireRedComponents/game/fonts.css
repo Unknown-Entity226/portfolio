@@ -1,0 +1,19 @@
+
+
+@font-face {
+  font-family: "PokemonGB";
+  src: url("../../assets/fonts/pokemonFont.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PokemonSolid";
+  src: url("../../assets/fonts/pokemon/Pokemon Solid.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PokemonHollow";
+  src: url("../../assets/fonts/pokemon/Pokemon Hollow.ttf") format("truetype");
+  font-display: swap;
+}

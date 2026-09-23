@@ -8,12 +8,12 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { path: "/", label: "Home" },
-    { path: "/projects", label: "Projects" },
-    { path: "/experience", label: "Experience" },
-    { path: "/skills", label: "Skills" },
-    { path: "/contact", label: "Contact" },
-    { path: "/about", label: "About" },
+    { path: "/normal", label: "Home" },
+    { path: "/normal/projects", label: "Projects" },
+    { path: "/normal/experience", label: "Experience" },
+    { path: "/normal/skills", label: "Skills" },
+    { path: "/normal/contact", label: "Contact" },
+    { path: "/normal/about", label: "About" },
   ];
 
   const linkClass = ({ isActive }) =>
@@ -33,18 +33,18 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-black/50 backdrop-blur-md border-b border-white/15 px-6 py-4 transition-all duration-300">
       <div className="w-full mx-auto flex items-center gap-3">
-        {/* <button
+        <button
           type="button"
           onClick={() => navigate("/")}
           className="shrink-0 rounded-md bg-amber-100 p-0.5"
           aria-label="Return to experience selection"
         >
           <img src={exitIcon} alt="" className="w-8 cursor-pointer" />
-        </button> */}
+        </button>
 
         {/* Brand / Logo */}
         <NavLink
-          to="/"
+          to="/normal"
           end
           className="flex shrink-0 items-center gap-3 cursor-pointer"
         >
